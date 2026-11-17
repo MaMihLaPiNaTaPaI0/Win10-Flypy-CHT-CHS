@@ -1,0 +1,8 @@
+$url = "https://github.com"
+New-Item "D:\PinyinTool" -ItemType Directory -Force | Out-Null
+Invoke-WebRequest -Uri $url -OutFile "D:\PinyinTool\repo.zip"
+Expand-Archive "D:\PinyinTool\repo.zip" -DestinationPath "D:\PinyinTool" -Force
+$folder = (Get-ChildItem "D:\PinyinTool" -Directory | Select-Object -First 1).FullName
+Move-Item "$folder\*" "D:\PinyinTool" -Force
+Remove-Item "D:\PinyinTool\repo.zip", $folder -Recurse -Force
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File "D:\PinyinTool\Deploy.ps1"
