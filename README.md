@@ -1,6 +1,9 @@
 # Win10-Flypy-CHT-CHS
 WIN10 个人使用 微软拼音双拼掛接方案 台湾繁體 備份，如需使用請自行更換檔案路徑
 
+如果要手動就只需在仓库页面点击绿色 <> Code > Download ZIP
+解压到 D:\PinyinTool 后双击 Install.bat 即可
+
 【系统与输入法环境档案】
 
 1. **基础环境**：
